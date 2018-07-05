@@ -255,114 +255,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>&lt;Excerpt in index | 首页摘要&gt;
+        <excerpt in="" index="" |="" 首页摘要="">
 
-### HEXO
-
-![](https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1493223838128&amp;di=c9a4b5d92b7ab41789dbde3069dbaf3a&amp;imgtype=0&amp;src=http%3A%2F%2Fpic4.zhimg.com%2Fd4c1239e75c02e8482c22017a6c8d407_r.jpg)
-
-&gt; 使用hexo和插件主题可以搭建一个美观的个人网站。奈何网上的教程毒不死分健全，只好自己一步一步去尝试，过程的遇到了很多坑，不过最后还是把博客弄出来了，在此记录一下博客搭建的全过程。
-
-&lt;!-- more --&gt;
-
-&lt;The rest of contents | 余下全文&gt;
-
-### 安装
-
-在安装hexo之前，首先要确保电脑中装有node和git环境。node版本最好是8.0以上。如果电脑中已经安装好node和git，则使用npm安装hexo。
-
-&lt;pre&gt;` npm install -g hexo-&lt;span class=&quot;hljs-keyword&quot;&gt;cli&lt;/span&gt;
-`&lt;/pre&gt;
-
-### 建站
-
-安装完成hexo后，执行下面指令生成项目文件夹，这里我们指令项目名为myblogs。
-
-&lt;pre&gt;`hexo init myblogs
-&lt;span class=&quot;hljs-built_in&quot;&gt;cd&lt;/span&gt; myblogs
-npm install
-`&lt;/pre&gt;
-
-至此已经生成了hexo站点文件夹。
-
-### 配置
-
-打开根目录下的_config.yml，修改网站的大部分基础配置。
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;参数&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;描述&lt;/th&gt;
-&lt;th style=&quot;text-align:right&quot;&gt;默认值&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;title&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站标题&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;subtitle&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站副标题&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;description&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站描述&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;author&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站作者&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;keywords&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站关键字&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;theme&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站主题&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;当值为false时禁用主题&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;deploy&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;部署配置&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-其他的配置项我们暂时保持不变，因为这涉及到更加高级的功能。
-
-### 预览
-
-当我们完成配置项后，运行以下命令：
-
-&lt;pre&gt;`hexo clean &lt;span class=&quot;hljs-comment&quot;&gt;// 清空之前的文件&lt;/span&gt;
-hexo generate（可简写为hexo g）&lt;span class=&quot;hljs-comment&quot;&gt;// 编译&lt;/span&gt;
-hexo sever（可简写为hexo s） &lt;span class=&quot;hljs-comment&quot;&gt;// 运行在本地服务器&lt;/span&gt;
-`&lt;/pre&gt;
-
-服务运行后，我们打开localhost:4000看到的效果是：
-![](http://ou3np1yz4.bkt.clouddn.com/buildHexo_11.png)
-
-### 部署
-</code></pre><ul>
-<li>创建远程仓库<br>  新建一个跟自己账号名字一样的空仓库，如图：<br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_2.png" alt=""><br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_3.png" alt=""></li>
-<li>链接本地和远程仓库<br>  在_config.yml中配置：<br>  deploy:<pre>`<span class="hljs-string">type:</span> git
-<span class="hljs-string">repo:</span> <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/storger/storger.github.io.git</span>
-`</pre></li>
-<li>下载插件<br>  安装 hexo-deployer-git。<pre>` $ npm <span class="hljs-operator"><span class="hljs-keyword">install</span> hexo-deployer-git <span class="hljs-comment">--save</span></span>
-`</pre></li>
-<li><p>部署<br>继续回到git shell输入命令：<br><pre>`  <span class="hljs-function">hexo clean<br>  hexo g<br>  hexo s<br>  hexo <span class="hljs-title">deploy</span> <span class="hljs-params">(简写 hexo d)</span></span></pre></p>
-<p>现在就可以在浏览器中访问<a href="http://yourname.github.io/" target="_blank" rel="noopener">http://yourname.github.io/</a> 来进入你的博客啦。</p>
-</li>
-</ul>
-
+<h3 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h3><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1493223838128&amp;di=c9a4b5d92b7ab41789dbde3069dbaf3a&amp;imgtype=0&amp;src=http%3A%2F%2Fpic4.zhimg.com%2Fd4c1239e75c02e8482c22017a6c8d407_r.jpg" alt=""></p>
+<blockquote>
+<p>使用hexo和插件主题可以搭建一个美观的个人网站。奈何网上的教程毒不死分健全，只好自己一步一步去尝试，过程的遇到了很多坑，不过最后还是把博客弄出来了，在此记录一下博客搭建的全过程。</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2018/07/05/使用hexo搭建个人博客/#more">more >></a>
+        
       
 
       
