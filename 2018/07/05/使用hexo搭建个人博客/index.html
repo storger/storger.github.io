@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ou3np1yz4.bkt.clouddn.com/buildHexo_2.png">
 <meta property="og:image" content="http://ou3np1yz4.bkt.clouddn.com/buildHexo_3.png">
-<meta property="og:updated_time" content="2018-07-05T09:34:43.207Z">
+<meta property="og:updated_time" content="2018-07-05T09:42:41.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MrZhou&#39;s Blog">
 <meta name="twitter:description" content="title: 使用hexo搭建个人博客date: 2018-07-05 09:43:54tags: -&amp;lt;span class=&amp;quot;ruby&amp;quot;&amp;gt; hexo &amp;lt;/span&amp;gt;-&amp;lt;span class=&amp;quot;ruby&amp;quot;&amp;gt; 分享&amp;lt;/span&amp;gt; `&amp;lt;/pre&amp;gt;  * * *  &amp;lt;Excerpt in inde">
@@ -271,16 +271,13 @@ hexo sever（可简写为hexo s） &lt;span class=&quot;hljs-comment&quot;&gt;//
 ### 部署
 </code></pre><ul>
 <li>创建远程仓库<br>  新建一个跟自己账号名字一样的空仓库，如图：<br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_2.png" alt=""><br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_3.png" alt=""></li>
-<li>链接本地和远程仓库<br>  在_config.yml中配置：<pre>`  <span class="hljs-attribute">deploy</span>:
-    <span class="hljs-attribute">type</span>: git
-    <span class="hljs-attribute">repo</span>: <span class="hljs-attribute">https</span>:<span class="hljs-comment">//github.com/storger/storger.github.io.git</span>
+<li>链接本地和远程仓库<br>  在_config.yml中配置：<br>  deploy:<pre>`<span class="hljs-string">type:</span> git
+<span class="hljs-string">repo:</span> <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/storger/storger.github.io.git</span>
 `</pre></li>
-<li>下载插件<br>  安装 hexo-deployer-git。<pre>` <span class="hljs-escape">``</span><span class="hljs-escape">`
-</span> $ npm install hexo-deployer-git --save
- <span class="hljs-escape">``</span>`
+<li>下载插件<br>  安装 hexo-deployer-git。<pre>` $ npm <span class="hljs-operator"><span class="hljs-keyword">install</span> hexo-deployer-git <span class="hljs-comment">--save</span></span>
 `</pre></li>
-<li><p>部署<br>  继续回到git shell输入命令：<br><pre>`  <span class="hljs-function">hexo clean<br>  hexo g<br>  hexo s<br>  hexo <span class="hljs-title">deploy</span> <span class="hljs-params">(简写 hexo d)</span></span></pre></p>
-<p>现在就可以在浏览器中访问<a href="http://yourname.github.io/来进入你的博客啦。" target="_blank" rel="noopener">http://yourname.github.io/来进入你的博客啦。</a></p>
+<li><p>部署<br>继续回到git shell输入命令：<br><pre>`  <span class="hljs-function">hexo clean<br>  hexo g<br>  hexo s<br>  hexo <span class="hljs-title">deploy</span> <span class="hljs-params">(简写 hexo d)</span></span></pre></p>
+<p>现在就可以在浏览器中访问<a href="http://yourname.github.io/" target="_blank" rel="noopener">http://yourname.github.io/</a> 来进入你的博客啦。</p>
 </li>
 </ul>
 
