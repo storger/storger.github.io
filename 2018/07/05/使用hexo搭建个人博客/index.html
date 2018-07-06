@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://ou3np1yz4.bkt.clouddn.com/buildHexo_11.png">
 <meta property="og:image" content="http://ou3np1yz4.bkt.clouddn.com/buildHexo_2.png">
 <meta property="og:image" content="http://ou3np1yz4.bkt.clouddn.com/buildHexo_3.png">
-<meta property="og:updated_time" content="2018-07-06T01:09:56.287Z">
+<meta property="og:updated_time" content="2018-07-06T01:22:51.651Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo搭建个人博客">
 <meta name="twitter:description" content="HEXO  使用hexo和插件主题可以搭建一个美观的个人网站。奈何网上的教程毒不死分健全，只好自己一步一步去尝试，过程的遇到了很多坑，不过最后还是把博客弄出来了，在此记录一下博客搭建的全过程。">
@@ -204,35 +204,28 @@ cd myblogs
 npm install
 </code></pre><p>至此已经生成了hexo站点文件夹。</p>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>打开根目录下的_config.yml，修改网站的大部分基础配置。</p>
-<table><br>    <thead><br>    <tr><br>    <th>参数</th><br>    <th style="text-align:center">描述</th><br>    <th style="text-align:right">默认值</th><br>    </tr><br>    </thead><br>    <tbody><br>    <tr><br>    <td>title</td><br>    <td style="text-align:center">网站标题</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>subtitle</td><br>    <td style="text-align:center">网站副标题</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>description</td><br>    <td style="text-align:center">网站描述</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>author</td><br>    <td style="text-align:center">网站作者</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>keywords</td><br>    <td style="text-align:center">网站关键字</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>theme</td><br>    <td style="text-align:center">网站主题</td><br>    <td style="text-align:right">当值为false时禁用主题</td><br>    </tr><br>    <tr><br>    <td>deploy</td><br>    <td style="text-align:center">部署配置</td><br>    <td style="text-align:right"></td><br>    </tr><br>    </tbody><br></table>
-
-<pre><code>其他的配置项我们暂时保持不变，因为这涉及到更加高级的功能。
-</code></pre><h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p>当我们完成配置项后，运行以下命令：</p>
+<p><table><br>    <thead><br>    <tr><br>    <th>参数</th><br>    <th style="text-align:center">描述</th><br>    <th style="text-align:right">默认值</th><br>    </tr><br>    </thead><br>    <tbody><br>    <tr><br>    <td>title</td><br>    <td style="text-align:center">网站标题</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>subtitle</td><br>    <td style="text-align:center">网站副标题</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>description</td><br>    <td style="text-align:center">网站描述</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>author</td><br>    <td style="text-align:center">网站作者</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>keywords</td><br>    <td style="text-align:center">网站关键字</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>theme</td><br>    <td style="text-align:center">网站主题</td><br>    <td style="text-align:right">当值为false时禁用主题</td><br>    </tr><br>    <tr><br>    <td>deploy</td><br>    <td style="text-align:center">部署配置</td><br>    <td style="text-align:right"></td><br>    </tr><br>    </tbody><br></table><br>其他的配置项我们暂时保持不变，因为这涉及到更加高级的功能。</p>
+<h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p>当我们完成配置项后，运行以下命令：</p>
 <pre><code>hexo clean // 清空之前的文件
 hexo generate（可简写为hexo g） // 编译
 hexo sever（可简写为hexo s） // 运行在本地服务器
 </code></pre><p>服务运行后，我们打开localhost:4000看到的效果是：<br><img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_11.png" alt=""></p>
 <h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><ul>
 <li><p>创建远程仓库</p>
-<p>  新建一个跟自己账号名字一样的空仓库，如图：<br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_2.png" alt=""><br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_3.png" alt=""></p>
+<p>新建一个跟自己账号名字一样的空仓库，如图：<br><img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_2.png" alt=""><br><img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_3.png" alt=""></p>
 </li>
 <li><p>链接本地和远程仓库</p>
-<p>  在_config.yml中配置：</p>
-<pre><code>deploy:
-type: git
-repo:https://github.com/storger/storger.github.io.git
-</code></pre></li>
+<p>在_config.yml中配置：</p>
+<p>deploy:<br>type: git<br>repo:<a href="https://github.com/storger/storger.github.io.git" target="_blank" rel="noopener">https://github.com/storger/storger.github.io.git</a></p>
+</li>
 <li><p>下载插件</p>
-<p>  安装 hexo-deployer-git。</p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre></li>
+<p>安装 hexo-deployer-git。</p>
+<p>npm install hexo-deployer-git –save</p>
+</li>
 <li><p>部署</p>
 <p>继续回到git shell输入命令：</p>
-<pre><code>hexo clean
-hexo g
-hexo s
-hexo deploy(简写 hexo d)
-</code></pre><p>现在就可以在浏览器中访问<a href="http://yourname.github.io/" target="_blank" rel="noopener">http://yourname.github.io/</a> 来进入你的博客啦。</p>
+<p>hexo clean<br>hexo g<br>hexo s<br>hexo deploy(简写 hexo d)</p>
+<p>现在就可以在浏览器中访问<a href="http://yourname.github.io/" target="_blank" rel="noopener">http://yourname.github.io/</a> 来进入你的博客啦。</p>
 </li>
 </ul>
 </the></excerpt>
@@ -501,15 +494,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">分享</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
               </li>
             
             <div class="clearfix"></div>
