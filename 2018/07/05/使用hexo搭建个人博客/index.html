@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://ou3np1yz4.bkt.clouddn.com/buildHexo_11.png">
 <meta property="og:image" content="http://ou3np1yz4.bkt.clouddn.com/buildHexo_2.png">
 <meta property="og:image" content="http://ou3np1yz4.bkt.clouddn.com/buildHexo_3.png">
-<meta property="og:updated_time" content="2018-07-05T09:50:16.134Z">
+<meta property="og:updated_time" content="2018-07-06T01:09:56.287Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo搭建个人博客">
 <meta name="twitter:description" content="HEXO  使用hexo和插件主题可以搭建一个美观的个人网站。奈何网上的教程毒不死分健全，只好自己一步一步去尝试，过程的遇到了很多坑，不过最后还是把博客弄出来了，在此记录一下博客搭建的全过程。">
@@ -197,78 +197,42 @@
 <the rest="" of="" contents="" |="" 余下全文="">
 
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在安装hexo之前，首先要确保电脑中装有node和git环境。node版本最好是8.0以上。如果电脑中已经安装好node和git，则使用npm安装hexo。</p>
-<pre><code>&lt;pre&gt;` npm install -g hexo-&lt;span class=&quot;hljs-keyword&quot;&gt;cli&lt;/span&gt;
-`&lt;/pre&gt;
+<pre><code>npm install -g hexo-&lt;span class=&quot;hljs-keyword&quot;&gt;cli&lt;/span&gt;
 </code></pre><h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><p>安装完成hexo后，执行下面指令生成项目文件夹，这里我们指令项目名为myblogs。</p>
-<pre><code>&lt;pre&gt;`hexo init myblogs
-&lt;span class=&quot;hljs-built_in&quot;&gt;cd&lt;/span&gt; myblogs
+<pre><code>hexo init myblogs
+cd myblogs
 npm install
-`&lt;/pre&gt;
 </code></pre><p>至此已经生成了hexo站点文件夹。</p>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>打开根目录下的_config.yml，修改网站的大部分基础配置。</p>
-<pre><code>&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;参数&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;描述&lt;/th&gt;
-&lt;th style=&quot;text-align:right&quot;&gt;默认值&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;title&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站标题&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;subtitle&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站副标题&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;description&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站描述&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;author&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站作者&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;keywords&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站关键字&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;theme&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;网站主题&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;当值为false时禁用主题&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;deploy&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;部署配置&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table><br>    <thead><br>    <tr><br>    <th>参数</th><br>    <th style="text-align:center">描述</th><br>    <th style="text-align:right">默认值</th><br>    </tr><br>    </thead><br>    <tbody><br>    <tr><br>    <td>title</td><br>    <td style="text-align:center">网站标题</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>subtitle</td><br>    <td style="text-align:center">网站副标题</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>description</td><br>    <td style="text-align:center">网站描述</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>author</td><br>    <td style="text-align:center">网站作者</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>keywords</td><br>    <td style="text-align:center">网站关键字</td><br>    <td style="text-align:right"></td><br>    </tr><br>    <tr><br>    <td>theme</td><br>    <td style="text-align:center">网站主题</td><br>    <td style="text-align:right">当值为false时禁用主题</td><br>    </tr><br>    <tr><br>    <td>deploy</td><br>    <td style="text-align:center">部署配置</td><br>    <td style="text-align:right"></td><br>    </tr><br>    </tbody><br></table>
 
-其他的配置项我们暂时保持不变，因为这涉及到更加高级的功能。
+<pre><code>其他的配置项我们暂时保持不变，因为这涉及到更加高级的功能。
 </code></pre><h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p>当我们完成配置项后，运行以下命令：</p>
-<pre><code>&lt;pre&gt;`hexo clean &lt;span class=&quot;hljs-comment&quot;&gt;// 清空之前的文件&lt;/span&gt;
-hexo generate（可简写为hexo g）&lt;span class=&quot;hljs-comment&quot;&gt;// 编译&lt;/span&gt;
-hexo sever（可简写为hexo s） &lt;span class=&quot;hljs-comment&quot;&gt;// 运行在本地服务器&lt;/span&gt;
-`&lt;/pre&gt;
+<pre><code>hexo clean // 清空之前的文件
+hexo generate（可简写为hexo g） // 编译
+hexo sever（可简写为hexo s） // 运行在本地服务器
 </code></pre><p>服务运行后，我们打开localhost:4000看到的效果是：<br><img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_11.png" alt=""></p>
 <h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><ul>
-<li>创建远程仓库<br>  新建一个跟自己账号名字一样的空仓库，如图：<br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_2.png" alt=""><br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_3.png" alt=""></li>
-<li>链接本地和远程仓库<br>  在_config.yml中配置：<br>  deploy:<pre>`<span class="hljs-string">type:</span> git
-<span class="hljs-string">repo:</span> <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/storger/storger.github.io.git</span>
-`</pre></li>
-<li>下载插件<br>  安装 hexo-deployer-git。<pre>` $ npm <span class="hljs-operator"><span class="hljs-keyword">install</span> hexo-deployer-git <span class="hljs-comment">--save</span></span>
-`</pre></li>
-<li><p>部署<br>继续回到git shell输入命令：<br><pre>`  <span class="hljs-function">hexo clean<br>  hexo g<br>  hexo s<br>  hexo <span class="hljs-title">deploy</span> <span class="hljs-params">(简写 hexo d)</span></span></pre></p>
-<p>现在就可以在浏览器中访问<a href="http://yourname.github.io/" target="_blank" rel="noopener">http://yourname.github.io/</a> 来进入你的博客啦。</p>
+<li><p>创建远程仓库</p>
+<p>  新建一个跟自己账号名字一样的空仓库，如图：<br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_2.png" alt=""><br>  <img src="http://ou3np1yz4.bkt.clouddn.com/buildHexo_3.png" alt=""></p>
+</li>
+<li><p>链接本地和远程仓库</p>
+<p>  在_config.yml中配置：</p>
+<pre><code>deploy:
+type: git
+repo:https://github.com/storger/storger.github.io.git
+</code></pre></li>
+<li><p>下载插件</p>
+<p>  安装 hexo-deployer-git。</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre></li>
+<li><p>部署</p>
+<p>继续回到git shell输入命令：</p>
+<pre><code>hexo clean
+hexo g
+hexo s
+hexo deploy(简写 hexo d)
+</code></pre><p>现在就可以在浏览器中访问<a href="http://yourname.github.io/" target="_blank" rel="noopener">http://yourname.github.io/</a> 来进入你的博客啦。</p>
 </li>
 </ul>
 </the></excerpt>
