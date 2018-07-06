@@ -118,8 +118,8 @@
         for (var i = 0, len = data.link.length; i < len; i++) {
           var minSrc = 'https://s5.postimg.cc/' + data.minLink[i];
           var src = 'https://s5.postimg.cc/' + data.link[i];
-          var type = data.type[i];
-          var target = src + (type === 'video' ? '.mp4' : '.jpg');
+          var type = 'image';
+          var target = src ;
           src += '.jpg';
 
           liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
