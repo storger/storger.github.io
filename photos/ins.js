@@ -120,7 +120,7 @@
           var src = 'https://s5.postimg.cc/' + data.link[i];
           var type = 'image';
           var target = src ;
-          src += '.jpg';
+          // src += '.jpg';
 
           liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
                 <a href="' + src + '" itemprop="contentUrl" data-size="640x640" data-type="' + type + '" data-target="' + target + '">\
