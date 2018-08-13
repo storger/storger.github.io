@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>相册 | MrZhou&#39;s Blog</title>
+  <title>使用vue构建HybridApp记录 | MrZhou&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ins 	空间   	图片来自postImage，正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChi">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="http://yoursite.com/photos/index.html">
+  <meta name="description" content="因为公司之前使用的技术一直都是多页面应用，vue无用武之地。最近在做的项目是一个跨平台应用，而且是我一个人负责前端这一块，所以就拍板使用vue了。使用单页面做app的过程十分闹心，碰到的坑很多，写篇文章记录一下。">
+<meta name="keywords" content="vue,hybrid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用vue构建HybridApp记录">
+<meta property="og:url" content="http://yoursite.com/2018/07/16/使用vue构建HybridApp记录/index.html">
 <meta property="og:site_name" content="MrZhou&#39;s Blog">
-<meta property="og:description" content="Ins 	空间   	图片来自postImage，正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChi">
+<meta property="og:description" content="因为公司之前使用的技术一直都是多页面应用，vue无用武之地。最近在做的项目是一个跨平台应用，而且是我一个人负责前端这一块，所以就拍板使用vue了。使用单页面做app的过程十分闹心，碰到的坑很多，写篇文章记录一下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-05T06:25:38.562Z">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531721103041&di=f1759f49620f7b79bac795a4dba8dec4&imgtype=0&src=http%3A%2F%2Fimg0.tuicool.com%2FF3eyuuJ.jpg%2521web">
+<meta property="og:updated_time" content="2018-07-20T02:02:59.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相册">
-<meta name="twitter:description" content="Ins 	空间   	图片来自postImage，正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChi">
+<meta name="twitter:title" content="使用vue构建HybridApp记录">
+<meta name="twitter:description" content="因为公司之前使用的技术一直都是多页面应用，vue无用武之地。最近在做的项目是一个跨平台应用，而且是我一个人负责前端这一块，所以就拍板使用vue了。使用单页面做app的过程十分闹心，碰到的坑很多，写篇文章记录一下。">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531721103041&di=f1759f49620f7b79bac795a4dba8dec4&imgtype=0&src=http%3A%2F%2Fimg0.tuicool.com%2FF3eyuuJ.jpg%2521web">
   
     <link rel="alternative" href="/atom.xml" title="MrZhou&#39;s Blog" type="application/atom+xml">
   
@@ -157,14 +159,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-使用vue构建HybridApp记录" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      相册
+      使用vue构建HybridApp记录
     </h1>
   
 
@@ -174,30 +176,21 @@
             </span>
         
         
+        <a href="/2018/07/16/使用vue构建HybridApp记录/" class="archive-article-date">
+  	<time datetime="2018-07-16T03:13:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-16</time>
+</a>
+        
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" href="./ins.css">
-<div class="photos-btn-wrap">
-	<a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Ins</a>
-	<a class="photos-btn" target="_blank" href="https://user.qzone.qq.com/2801401506">空间</a>
-</div>
-<div class="instagram itemscope">
-	<a href="https://postimg.cc.com" target="_blank" class="open-ins">图片来自postImage，正在加载中…</a>
-</div>
-<script>
-  (function() {
-    var loadScript = function(path) {
-      var $script = document.createElement('script')
-      document.getElementsByTagName('body')[0].appendChild($script)
-      $script.setAttribute('src', path)
-    }
-    setTimeout(function() {
-      loadScript('./ins.js')
-    }, 0)
-  })()
-</script>
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531721103041&amp;di=f1759f49620f7b79bac795a4dba8dec4&amp;imgtype=0&amp;src=http%3A%2F%2Fimg0.tuicool.com%2FF3eyuuJ.jpg%2521web" alt=""></p>
+<blockquote>
+<p>因为公司之前使用的技术一直都是多页面应用，vue无用武之地。最近在做的项目是一个跨平台应用，而且是我一个人负责前端这一块，所以就拍板使用vue了。使用单页面做app的过程十分闹心，碰到的坑很多，写篇文章记录一下。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="什么是hybrid-app"><a href="#什么是hybrid-app" class="headerlink" title="什么是hybrid app"></a>什么是hybrid app</h2><p>hybrid app 即混合app，是一种介于web-app和native-app之间的app。兼具已维护和良好用户交互体验的跨平台应用。hybrid app 的技术难点就是如何使H5页面和native之间交互如何顺利进行，目前hybrid app应用技术还不算太完善，但已经有很多平台投入使用了。有Dcloud，apiCloud，apican，cordova等等。跟框架结合的有react-native，ionic，weex等。</p>
+<p>## </p>
 
       
 
@@ -232,6 +225,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hybrid</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -285,6 +293,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/13/parcel打包vue项目填坑之路/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">parcel打包vue项目填坑之路</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -306,7 +324,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是hybrid-app"><span class="toc-number">1.</span> <span class="toc-text">什么是hybrid app</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -316,6 +334,29 @@
 </aside>
 
 
+
+  
+
+  
+
+  
+  
+</script>
+<div id="SOHUCS" sid="使用vue构建HybridApp记录" ></div>
+<script type="text/javascript">
+(function(){
+var appid = "cytHpDufh";
+var conf = "prod_14e119f1a45cd234b9b66c897df2ea75";
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
+</script>
+
+  
+
+  
+
+  
 
 
           </div>
@@ -342,7 +383,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
