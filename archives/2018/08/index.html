@@ -6,23 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>parcel打包vue项目填坑之路 | MrZhou&#39;s Blog</title>
+  <title>Archives: 2018/8 | MrZhou&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="webpack 打包的高性能给我们的项目构建带来了便捷，同时复杂的配置也让我们苦不堪言，这个时候parcel横空出世，号称“零配置“。在这里做一个笔记，记录如何用parcel打包一个vue.js项目。">
-<meta name="keywords" content="parcel,vue">
-<meta property="og:type" content="article">
-<meta property="og:title" content="parcel打包vue项目填坑之路">
-<meta property="og:url" content="http://yoursite.com/2018/07/13/parcel打包vue项目填坑之路/index.html">
+  <meta name="description" content="码农一枚，学历较低，自学前端。喜欢研究技术，以上。">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MrZhou&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2018/08/index.html">
 <meta property="og:site_name" content="MrZhou&#39;s Blog">
-<meta property="og:description" content="webpack 打包的高性能给我们的项目构建带来了便捷，同时复杂的配置也让我们苦不堪言，这个时候parcel横空出世，号称“零配置“。在这里做一个笔记，记录如何用parcel打包一个vue.js项目。">
+<meta property="og:description" content="码农一枚，学历较低，自学前端。喜欢研究技术，以上。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/1/9/160d98d640b7af77?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:image" content="https://images2017.cnblogs.com/blog/1059788/201712/1059788-20171224130535646-1152456762.png">
-<meta property="og:updated_time" content="2018-07-13T07:44:21.884Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="parcel打包vue项目填坑之路">
-<meta name="twitter:description" content="webpack 打包的高性能给我们的项目构建带来了便捷，同时复杂的配置也让我们苦不堪言，这个时候parcel横空出世，号称“零配置“。在这里做一个笔记，记录如何用parcel打包一个vue.js项目。">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/1/9/160d98d640b7af77?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta name="twitter:title" content="MrZhou&#39;s Blog">
+<meta name="twitter:description" content="码农一枚，学历较低，自学前端。喜欢研究技术，以上。">
   
     <link rel="alternative" href="/atom.xml" title="MrZhou&#39;s Blog" type="application/atom+xml">
   
@@ -160,267 +156,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-parcel打包vue项目填坑之路" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      parcel打包vue项目填坑之路
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/08/13/arcgis地图开发参考/" class="archive-article-date">
+  	<time datetime="2018-08-13T08:32:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/08/13/arcgis地图开发参考/">arcgis地图开发参考</a>
     </h1>
   
 
-        
-            <span class="archive-article-date">
-              阅读量 <span id="busuanzi_value_page_pv"></span>
-            </span>
-        
-        
-        <a href="/2018/07/13/parcel打包vue项目填坑之路/" class="archive-article-date">
-  	<time datetime="2018-07-13T06:51:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://user-gold-cdn.xitu.io/2018/1/9/160d98d640b7af77?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
-<blockquote>
-<p>webpack 打包的高性能给我们的项目构建带来了便捷，同时复杂的配置也让我们苦不堪言，这个时候parcel横空出世，号称“零配置“。在这里做一个笔记，记录如何用parcel打包一个vue.js项目。</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="1-什么样的情况下使用parcel"><a href="#1-什么样的情况下使用parcel" class="headerlink" title="1. 什么样的情况下使用parcel"></a>1. 什么样的情况下使用parcel</h2><p>parcel基本不需要配置，用于构建中小型项目时的速度非常快，推荐代码行在15k以下可以使用parcel做构建工具。</p>
-<h2 id="2-新建一个vue项目"><a href="#2-新建一个vue项目" class="headerlink" title="2. 新建一个vue项目"></a>2. 新建一个vue项目</h2><p>项目结构可以使用vue-cli生成的src目录项目结构<br><img src="https://images2017.cnblogs.com/blog/1059788/201712/1059788-20171224130535646-1152456762.png" alt=""><br>初始化项目</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> init</span><br></pre></td></tr></table></figure>
-<p>修改<strong>package.json</strong>文件中的入口文件：</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"main"</span>: <span class="string">"main.js"</span>,</span><br></pre></td></tr></table></figure>
-<p>添加快捷命令：</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"dev"</span>: <span class="string">"parcel index.html -p 8089 --open"</span>,</span><br><span class="line">	<span class="string">"build"</span>: <span class="string">"parcel build index.html --public-url ./"</span></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>：</p>
-<ol>
-<li>这里的<code>-p 8089</code> 是设置运行服务器端口，不写则端口默认为1234。</li>
-<li><code>--open</code> 是运行完成后自动打开浏览器，不写则不会自动打开。</li>
-<li>打包不能缺少<code>--public-url ./</code>，否则打包后的静态文件路径会找不到。</li>
-</ol>
-<h2 id="3-安装依赖"><a href="#3-安装依赖" class="headerlink" title="3. 安装依赖"></a>3. 安装依赖</h2><p>安装vue和parcel需要的依赖模块</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//</span> 安装parcel，这里把parcel安装到项目中，全局的parcel打包时会出现错误。</span><br><span class="line">npm install parcel-bundler <span class="params">--save-dev</span></span><br><span class="line"></span><br><span class="line"><span class="string">//</span> 安装vue和vue-router</span><br><span class="line">npm install vue vue-router <span class="params">--save</span></span><br><span class="line"></span><br><span class="line"><span class="string">//</span> 安装babel转码</span><br><span class="line">npm install babel-preset-env <span class="params">--save</span></span><br><span class="line"></span><br><span class="line"><span class="string">//</span> 安装<span class="string">.vue</span>文件解析插件,如果parcel的版本大于1.7.0，也可以不安装</span><br><span class="line">npm install parcel-plugin-vue <span class="params">--save</span></span><br></pre></td></tr></table></figure>
-<p>新建<code>.babelrc</code>文件，添加配置：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"presets"</span>: [</span><br><span class="line">        <span class="string">"env"</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果要使用PostCss。新建<code>postcss.config.js</code>文件，添加配置：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="built_in">require</span>(<span class="string">'autoprefixer'</span>)(&#123; browsers:  [</span><br><span class="line">                              <span class="string">'last 20 versions'</span>,</span><br><span class="line">                              <span class="string">'IE 9'</span>,</span><br><span class="line">                              <span class="string">'iOS &gt;= 8'</span>]&#125;)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用less或者Sass，则安装：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="keyword">less</span> <span class="comment">--save</span></span><br><span class="line"></span><br><span class="line">npm <span class="keyword">install</span> node-sass <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-<p>其他的 vuex，axios，element-ui等插件按常规方法一一安装即可。</p>
-<h2 id="4-gitignore"><a href="#4-gitignore" class="headerlink" title="4. .gitignore"></a>4. .gitignore</h2><p>使用 git 管理仓库时，切记添加自定义忽略文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Custom</span></span><br><span class="line">.cache</span><br><span class="line">dist</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> ...</span></span><br><span class="line"></span><br><span class="line">node_modules/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> ...</span></span><br></pre></td></tr></table></figure>
-<h2 id="5-Command"><a href="#5-Command" class="headerlink" title="5. Command"></a>5. Command</h2><ul>
-<li><code>npm run dev</code> 运行</li>
-<li><code>npm run build</code> 构建</li>
-</ul>
-<p>有可能出现的错误</p>
-<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Server running at http://localhost:1234</span><br><span class="line">× C:<span class="symbol">\U</span>sers<span class="symbol">\Y</span>unYou<span class="symbol">\D</span>ocuments<span class="symbol">\G</span>itHub<span class="symbol">\v</span>ue-parcel-demo<span class="symbol">\s</span>rc<span class="symbol">\r</span>outer<span class="symbol">\i</span>ndex.js:3:23: Cannot resolve dependency ‘@/components/HelloWorld’</span><br></pre></td></tr></table></figure>
-<p>原因是webpack可以设置路径别名<code>@</code>，把项目文件中导入路径修改成相对路径即可。</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Vue warn]: You are using the runtime-only <span class="keyword">build</span> of Vue <span class="keyword">where</span> the template compiler <span class="keyword">is</span> <span class="keyword">not</span> available. Either pre-compile the templates <span class="keyword">into</span> render functions, <span class="keyword">or</span> <span class="keyword">use</span> the compiler-included <span class="keyword">build</span>.(found <span class="keyword">in</span> )</span><br></pre></td></tr></table></figure>
-<p>在使用vue-cli生成webpack模板过程中，有如下提示：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">? Vue build (Use arrow keys)</span><br><span class="line">&gt; Runtime + Compiler: recommended <span class="keyword">for</span> most users</span><br><span class="line">  Runtime-only: about 6KB lighter min+gzip, but templates (<span class="keyword">or</span> any Vue-specific HTML) are ONLY allowed <span class="keyword">in</span> .vue files - render functions are required elsewhere</span><br></pre></td></tr></table></figure>
-<p>如果选择 <code>Runtime + Compiler</code>, <code>main.js</code> 为</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">new</span> <span class="selector-tag">Vue</span>(&#123;</span><br><span class="line">  <span class="attribute">el</span>: <span class="string">'#app'</span>,</span><br><span class="line">  router,</span><br><span class="line">  <span class="attribute">components</span>: &#123; App &#125;,</span><br><span class="line">  <span class="attribute">template</span>: <span class="string">'&lt;App/&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>如果选择 <code>Runtime-only</code>, <code>main.js</code> 则为</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">new</span> <span class="selector-tag">Vue</span>(&#123;</span><br><span class="line">  <span class="attribute">el</span>: <span class="string">'#app'</span>,</span><br><span class="line">  router,</span><br><span class="line">  render: h =&gt; <span class="built_in">h</span>(App)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>Parcel 使用 <code>runtime-only</code>, 修改 <code>main.js</code> 中内容为 <code>Runtime-only</code> 形式 <code>render: h =&gt; h(App)</code> 即可。</p>
-<h2 id="6-parcel-vue"><a href="#6-parcel-vue" class="headerlink" title="6. parcel-vue"></a>6. parcel-vue</h2><p><code>parcel-vue</code>是 一个基于parcel打包工具的 vue开发脚手架解决方案,强烈建议使用node8.0以上。<a href="https://github.com/w3c-king/parcel-vue" target="_blank" rel="noopener">项目地址</a></p>
-<ul>
-<li>初始化项目</li>
-</ul>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 安装脚手架</span></span><br><span class="line"><span class="symbol">$</span> npm install parcel-vue -g</span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line"><span class="symbol">$</span> parcel-vue projectName</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装依赖</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> projectName</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>运行构建</li>
-</ul>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">run</span><span class="bash"> dev</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">npm run build</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>路由懒加载<br>只需将传统 import page from ‘path’ 方式改为 const page = () =&gt; import(‘path’) 即可</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 此种方式路由不会懒加载</span></span><br><span class="line"><span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">'../views/HelloWorld/HelloWorld.vue'</span></span><br><span class="line"><span class="comment">// 此种方式引入即可实现路由懒加载,打包时js文件自动拆分</span></span><br><span class="line"><span class="keyword">const</span> HelloWorld =  <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'../views/HelloWorld/HelloWorld.vue'</span>)</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">parcel</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">arcgis</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">地图</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/07/16/关于Hybrid App/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          关于Hybrid App
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/07/12/使用parcel打包项目/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用parcel打包项目</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-什么样的情况下使用parcel"><span class="toc-number">1.</span> <span class="toc-text">1. 什么样的情况下使用parcel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-新建一个vue项目"><span class="toc-number">2.</span> <span class="toc-text">2. 新建一个vue项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-安装依赖"><span class="toc-number">3.</span> <span class="toc-text">3. 安装依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-gitignore"><span class="toc-number">4.</span> <span class="toc-text">4. .gitignore</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Command"><span class="toc-number">5.</span> <span class="toc-text">5. Command</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-parcel-vue"><span class="toc-number">6.</span> <span class="toc-text">6. parcel-vue</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
+    </div></section>
   
 
-  
-
-  
-  
-</script>
-<div id="SOHUCS" sid="parcel打包vue项目填坑之路" ></div>
-<script type="text/javascript">
-(function(){
-var appid = "cytHpDufh";
-var conf = "prod_14e119f1a45cd234b9b66c897df2ea75";
-var width = window.innerWidth || document.documentElement.clientWidth;
-if (width < 960) {
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
-</script>
-
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -447,8 +240,8 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
