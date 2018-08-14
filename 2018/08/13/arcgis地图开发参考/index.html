@@ -17,7 +17,7 @@
 <meta property="og:description" content="首先这是一份参考文档，不是一份教程，如有缺陷，敬请谅解。arcgis地图服务功能十分齐全，而且有丰富的api和线上demo，本文所讲到的只是笔者自己开发中常用的api。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534159410546&di=bb9d83963ca49a4ec74a49d425b9d7f7&imgtype=0&src=http%3A%2F%2Fwww.processamentodigital.com.br%2Fwp-content%2Fuploads%2F2011%2F07%2Farcgis10b.png">
-<meta property="og:updated_time" content="2018-08-13T09:40:25.313Z">
+<meta property="og:updated_time" content="2018-08-14T03:26:36.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="arcgis地图开发参考">
 <meta name="twitter:description" content="首先这是一份参考文档，不是一份教程，如有缺陷，敬请谅解。arcgis地图服务功能十分齐全，而且有丰富的api和线上demo，本文所讲到的只是笔者自己开发中常用的api。">
@@ -189,11 +189,88 @@
 <p>首先这是一份参考文档，不是一份教程，如有缺陷，敬请谅解。arcgis地图服务功能十分齐全，而且有丰富的api和线上demo，本文所讲到的只是笔者自己开发中常用的api。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="arcgis结构"><a href="#arcgis结构" class="headerlink" title="arcgis结构"></a>arcgis结构</h2><ul>
-<li>底图</li>
-<li>地图</li>
-<li>视图<br>我们可以简单的理解为：<br>底图&lt; 地图 &lt; 视图 ，缺一不可。</li>
+<h2 id="arcgis模块"><a href="#arcgis模块" class="headerlink" title="arcgis模块"></a>arcgis模块</h2><h2 id="arcgis结构"><a href="#arcgis结构" class="headerlink" title="arcgis结构"></a>arcgis结构</h2><p>我们可以简单的理解为：<br>底图&lt; 地图 &lt; 视图 ，缺一不可。</p>
+<h3 id="底图"><a href="#底图" class="headerlink" title="底图"></a>底图</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myMap = <span class="keyword">new</span> <span class="built_in">Map</span>(&#123;</span><br><span class="line">    basemap: 底图</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>basemap可以是arcgis自带的底图<a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap" target="_blank" rel="noopener">basemap可选值</a>。<br>也可以是自定义的底图。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> layer = <span class="keyword">new</span> TileLayer(&#123;            </span><br><span class="line"> url:<span class="string">"http://218.94.6.92:6080/arcgis/rest/services/jssl_vector_L3_L17/MapServer"</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">var</span> customBasemap = <span class="keyword">new</span> Basemap(&#123;</span><br><span class="line">    baseLayers: [layer],</span><br><span class="line">    title: <span class="string">"Custom Basemap"</span>,</span><br><span class="line">    id: <span class="string">"myBasemap"</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">var</span> myMap = <span class="keyword">new</span> <span class="built_in">Map</span>(&#123;</span><br><span class="line">    basemap: customBasemap</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myMap = <span class="keyword">new</span> <span class="built_in">Map</span>(&#123;</span><br><span class="line">   basemap:底图,</span><br><span class="line">   layers:可操作图层,</span><br><span class="line">   allLayers:地图中包含的所有图层,</span><br><span class="line">   ground:定义地图的曲面属性，此属性只在<span class="number">3</span>D地图中有效,</span><br><span class="line">   declaredClass:指定地图类名</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加图层</span></span><br><span class="line"><span class="keyword">var</span> layer1 = <span class="keyword">new</span> GraphicsLayer(&#123;<span class="attr">id</span>:<span class="string">'a'</span>&#125;);</span><br><span class="line"><span class="keyword">var</span> layer2 = <span class="keyword">new</span> GraphicsLayer(&#123;<span class="attr">id</span>:<span class="string">'b'</span>&#125;);</span><br><span class="line">myMap.add(layer1);</span><br><span class="line">myMap.addMany([layer1,layer2]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除图层</span></span><br><span class="line">myMap.remove(layer1);</span><br><span class="line">myMap.removeMany([layer1,layer2]);</span><br><span class="line">myMap.removeAll();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 根据id获取地图中的图层</span></span><br><span class="line">myMap.findLayerById(<span class="string">'a'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 更改图层层级</span></span><br><span class="line">myMap.reorder(layer1,<span class="number">999</span>);</span><br><span class="line">注意：添加的第一层始终是基础层，即使其顺序已经更改，最底层的index为<span class="number">0</span>。</span><br></pre></td></tr></table></figure>
+<h3 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h3><p>视图分为2D视图（MapView）和3D视图（SceneView）,这里只讲2D。</p>
+<ul>
+<li><p>1.使用视图<br>创建一个视图至少要引用两个对象：Map实例和Dom元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> view = <span class="keyword">new</span> MapView(&#123;</span><br><span class="line">  map: myMap,</span><br><span class="line">  container: <span class="string">"viewDiv"</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.属性（常用）</p>
+</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>作用</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>center</td>
+<td>视图中心</td>
+<td>[120,33]</td>
+</tr>
+<tr>
+<td>zoom</td>
+<td>视图缩放</td>
+<td>10</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>视图比例</td>
+<td>24000</td>
+</tr>
+<tr>
+<td>constraints</td>
+<td>视图限制</td>
+<td><a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints" target="_blank" rel="noopener">参考</a></td>
+</tr>
+<tr>
+<td>animation</td>
+<td>视图变化动画</td>
+<td><a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#animation" target="_blank" rel="noopener">参考</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>3.方法（常用）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>作用</th>
+<th>代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>when(callback,errback)</td>
+<td>视图加载成功或失败后的回调</td>
+<td></td>
+</tr>
+<tr>
+<td>goTo(target,options)</td>
+<td>改变视图位置、缩放、比例</td>
+<td>goTo({center:[122,30],zoom:5})</td>
+</tr>
+<tr>
+<td>hitTest()</td>
+<td>返回与指定屏幕坐标相交的每个图层的最顶层要素</td>
+<td></td>
+</tr>
+<tr>
+<td>on()</td>
+<td>绑定事件</td>
+<td><a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#event" target="_blank" rel="noopener">事件类型</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="arcgis图层概念"><a href="#arcgis图层概念" class="headerlink" title="arcgis图层概念"></a>arcgis图层概念</h2><p>arcgis图层有很多种，每种图层的应用场景也有所不同。</p>
 <ul>
 <li><a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html" target="_blank" rel="noopener">切片图层</a><br>模块名称：<code>esri/layers/TileLayer</code><br>切片图层就是静态图层，服务器事先已经切好缓存，目的就是能够快速、流畅的加载地图。一般作为整个地图的底图使用。<br>例子：<a href="https://developers.arcgis.com/javascript/latest/sample-code/sandbox/index.html?sample=intro-layers" target="_blank" rel="noopener">Intro to layers</a></li>
@@ -336,7 +413,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#arcgis结构"><span class="toc-number">1.</span> <span class="toc-text">arcgis结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arcgis图层概念"><span class="toc-number">2.</span> <span class="toc-text">arcgis图层概念</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#arcgis模块"><span class="toc-number">1.</span> <span class="toc-text">arcgis模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arcgis结构"><span class="toc-number">2.</span> <span class="toc-text">arcgis结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#底图"><span class="toc-number">2.1.</span> <span class="toc-text">底图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#地图"><span class="toc-number">2.2.</span> <span class="toc-text">地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视图"><span class="toc-number">2.3.</span> <span class="toc-text">视图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arcgis图层概念"><span class="toc-number">3.</span> <span class="toc-text">arcgis图层概念</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -473,6 +550,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">parcel</a>
               </li>
              
@@ -485,14 +570,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
@@ -501,15 +578,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
             <div class="clearfix"></div>
