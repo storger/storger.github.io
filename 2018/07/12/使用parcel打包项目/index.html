@@ -202,10 +202,10 @@
 <h2 id="sass"><a href="#sass" class="headerlink" title="sass"></a>sass</h2><p>SCSS编译需要 <code>node-sass</code> 模块。可以用 npm 来安装它：</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install <span class="keyword">node</span><span class="title">-sass</span></span><br></pre></td></tr></table></figure>
 <p>一旦 <code>node-sass</code> 安装完成，你就可以在 JavaScript 文件中导入 SCSS 文件。</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'./custom.scss'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'./custom.scss'</span></span><br></pre></td></tr></table></figure>
 <p>SCSS 文件中的依赖可以使用 <code>@import</code> 语句。</p>
 <h2 id="PostCss"><a href="#PostCss" class="headerlink" title="PostCss"></a>PostCss</h2><p>在<code>parcel-bundler</code>中已经集成了PostCss 模块。在根文件夹下创建<code>postcss.config.js</code>文件。</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="built_in">require</span>(<span class="string">'autoprefixer'</span>)(&#123; browsers:  [</span><br><span class="line">                              <span class="string">'last 20 versions'</span>,</span><br><span class="line">                              <span class="string">'IE 9'</span>,</span><br><span class="line">                              <span class="string">'iOS &gt;= 8'</span>]&#125;)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="built_in">require</span>(<span class="string">'autoprefixer'</span>)(&#123; <span class="attr">browsers</span>:  [</span><br><span class="line">                              <span class="string">'last 20 versions'</span>,</span><br><span class="line">                              <span class="string">'IE 9'</span>,</span><br><span class="line">                              <span class="string">'iOS &gt;= 8'</span>]&#125;)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h2><p>安装babel插件</p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install </span><span class="keyword">babel-cli </span>--save</span><br><span class="line"></span><br><span class="line">npm <span class="keyword">install </span><span class="keyword">babel-preset-env </span>--save</span><br></pre></td></tr></table></figure>
 <p>新建<code>.bablerc</code> 文件，配置</p>
@@ -477,7 +477,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">资源</a>
+                <a href="javascript:void(0)" class="js-tag color2">arcgis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">地图</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -489,11 +493,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">arcgis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">地图</a>
+                <a href="javascript:void(0)" class="js-tag color3">资源</a>
               </li>
              
               <li class="article-tag-list-item">
